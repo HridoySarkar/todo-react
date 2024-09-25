@@ -14,7 +14,7 @@ let list=[
     {
         id:3,
         title:"University",
-        status:"padding",
+        status:"Complete",
         priority:"High"
     },
     {

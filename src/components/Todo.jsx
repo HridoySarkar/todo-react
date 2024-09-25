@@ -85,6 +85,10 @@ function Todo() {
                 {tasks.map((task) => (
                   <tr key={task.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                     <th scope="row" className={`px-6 py-4 font-medium whitespace-nowrap dark:text-white ${task.status === 'Complete' ? 'line-through text-gray-400' : 'text-gray-900'}`}>
+                      <input type="checkbox" 
+                      className='mr-2' 
+                      defaultChecked={task.status === "Complete" ? true : false}
+                      value=""/>
                       {task.title}
                     </th>
                     <td className="px-6 py-4">{task.status}</td>
