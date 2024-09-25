@@ -15,7 +15,7 @@ function Todo() {
   // Handle form input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value }); // Update form data dynamically
+    setFormData({ ...formData, [name]: value }); 
   };
 
   // Handle submit for adding or editing tasks
@@ -121,19 +121,19 @@ function Todo() {
           </div>
 
           {/* Form */}
-          <form onSubmit={todoSubmit} className="mb-4 font-mono w-full mt-4 bg-gray-500 rounded">
+          <form onSubmit={todoSubmit} className="mb-4 font-mono w-full mt-4 bg-gray-500 rounded flex justify-between">
             <input
               type="text"
               id="todoInput"
               name="title" // The name should match the key in formData
               value={formData.title} // Controlled input
               onChange={handleInputChange} // Update state on change
-              className="outline-none bg-transparent border rounded border-gray-300 py-4 px-4 mr-2"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Enter your Task"
             />
             <button
               type="submit"
-              className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              className="py-2.5 m-2 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
             >
               {isEditing ? "Update" : "Enter"}
             </button>
